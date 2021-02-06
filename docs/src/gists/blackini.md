@@ -49,7 +49,7 @@ By changing just two lines in the [read_pyproject](https://github.com/psf/black/
 Basically, just read the `.ini` file as `dict`, and return the same structure `toml.decoder.load` would. If anything fails, use normal `toml` mode for a graceful fallback.
 
 ```Python hl_lines="15-36"
-{!../../code/blackini.py!}
+{!docs/src/code/blackini.py!}
 ```
 
 ## Patch `toml` loader to allow `.ini`
@@ -57,7 +57,7 @@ Basically, just read the `.ini` file as `dict`, and return the same structure `t
 Next, we make sure that `black` uses this version instead of the original one by monkeypatching `toml.load`:
 
 ```Python hl_lines="10 43"
-{!../../code/blackini.py!}
+{!docs/src/code/blackini.py!}
 ```
 
 ## Call `black`'s main
@@ -65,7 +65,7 @@ Next, we make sure that `black` uses this version instead of the original one by
 Finally, just call black:
 
 ```Python hl_lines="12 44"
-{!../../code/blackini.py!}
+{!docs/src/code/blackini.py!}
 ```
 
 Et voilà, you have a black callable which loads config form tox.ini.

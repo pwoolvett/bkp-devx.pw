@@ -1,7 +1,15 @@
-site_name: Independent and Identically distributed Brainfarts
+site_name: Independent and Identically distributed Markdowns
+site_author: Pablo Woolvett
+
+repo_name: devx.pw
+repo_url: https://github.com/pwoolvett/devx.pw
+
+docs_dir: docs/src
+site_dir: docs/build
+
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   palette:
     scheme: slate
     primary: black
@@ -37,15 +45,14 @@ extra:
       link: https://pypi.org/user/pwoolvett
     - icon: material/forum
       link: https://forums.developer.nvidia.com/u/pwoolvett
-      
-repo_url: https://github.com/pwoolvett/pwoolvett.github.io
+
 plugins:
   - search
   - img2fig
 markdown_extensions:
   - markdown_include.include:
       throwException: true
-      base_path: 'docs/docs/code'
+      base_path: ''
   - markdown.extensions.codehilite:
       guess_lang: false
   - meta
