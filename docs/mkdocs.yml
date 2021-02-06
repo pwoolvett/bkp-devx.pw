@@ -1,4 +1,4 @@
-site_name: Independent and Identically distributed Brainfarts
+  site_name: Independent and Identically distributed Brainfarts
 theme:
   name: material
   custom_dir: overrides

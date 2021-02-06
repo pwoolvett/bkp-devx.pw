@@ -24,8 +24,17 @@ jobs:
 
       - name: Install mkdocs
         run: |
-          pip install mkdocs==1.1.2 mkdocs-material
+          pip install -r requirements.txt
 
+      - name: Red Pill
+        if: {{ github.ref != 'ref/head/master' }}
+        run: |
+          echo "canvas.devx.pw" > docs/CNAME
+
+      - name: Blue Pill
+        if: {{ github.ref == 'ref/head/master' }}
+        run: |
+          echo "devx.pw" > docs/CNAME
 
       - name: Build mkdocs
         run: |
@@ -33,9 +42,24 @@ jobs:
             --clean \
             -f docs/mkdocs.yml \
             -d build
+          
+      - name: Deploy
+        run: |
+          git config user.name "Pablo Woolvett"
+          git config user.email "pablowoolvett@gmail.com"
+          mkdocs gh-deploy \
+            --clean \
+            -f docs/mkdocs.yml \
+            -d build \
+            --strict \
+            --force
 
       - name: Deploy Prod
+        if: {{ github.ref == 'ref/head/master' }}
         run: |
+          
+          git config user.name "Pablo Woolvett"
+          git config user.email "pablowoolvett@gmail.com"
           mkdocs gh-deploy \
             --clean \
             -f docs/mkdocs.yml \
