@@ -1,5 +1,7 @@
 # Hello there!
 
+![This is my cv! (minus stopwords)](static/img/wordcloud.svg)
+
 Here you can find some notes, snippets, reflections, summaries, and general thoughts on
 what I find interesting to save on my daily basis. Topics  are usually related to one of:
 

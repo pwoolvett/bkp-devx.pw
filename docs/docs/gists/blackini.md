@@ -23,6 +23,11 @@ title: Blackini
     </div>
 
 
+??? attention "Deprecation Notice"
+    Although the project is fully functional, I no longer use this method as the rest of
+    the python ecosystem has evolved and now most tools accept configuration from
+    `pyproject.toml`.
+
 # Motivation
 
 This is a [black](https://github.com/psf/black) wrapper to allow it to read configuration from .ini files.
@@ -43,26 +48,24 @@ By changing just two lines in the [read_pyproject](https://github.com/psf/black/
 
 Basically, just read the `.ini` file as `dict`, and return the same structure `toml.decoder.load` would. If anything fails, use normal `toml` mode for a graceful fallback.
 
-```
---8<--​ blackini.py
+```Python hl_lines="15-36"
+{!../../code/blackini.py!}
 ```
 
 ## Patch `toml` loader to allow `.ini`
 
 Next, we make sure that `black` uses this version instead of the original one by monkeypatching `toml.load`:
 
-```python
-import toml
-toml.load = patched_load
+```Python hl_lines="10 43"
+{!../../code/blackini.py!}
 ```
 
 ## Call `black`'s main
 
 Finally, just call black:
 
-```python
-from black import main
-sys.exit(main())
+```Python hl_lines="12 44"
+{!../../code/blackini.py!}
 ```
 
 Et voilà, you have a black callable which loads config form tox.ini.

@@ -39,17 +39,24 @@ extra:
       link: https://forums.developer.nvidia.com/u/pwoolvett
       
 repo_url: https://github.com/pwoolvett/pwoolvett.github.io
+plugins:
+  - search
+  - img2fig
 markdown_extensions:
+  - markdown_include.include:
+      throwException: true
+      base_path: 'docs/docs/code'
+  - markdown.extensions.codehilite:
+      guess_lang: false
   - meta
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.snippets:
-      check_paths: true
-      base_path: "."
   - pymdownx.progressbar
+  - pymdownx.details
+  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.arithmatex:

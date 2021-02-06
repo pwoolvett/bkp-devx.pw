@@ -41,9 +41,9 @@ def main():
     sys.argv[0] = re.sub(r"(-script\.pyw?|\.exe)?$", "", sys.argv[0])
 
     toml.load = patched_load
-    # pylint: disable=E1120
     sys.exit(main_black())
 
 
 if __name__ == "__main__":
+
     main()
