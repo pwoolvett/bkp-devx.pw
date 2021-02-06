@@ -40,4 +40,5 @@ jobs:
             --clean \
             -f docs/mkdocs.yml \
             -d build \
-            --strict
+            --strict \
+            --force
