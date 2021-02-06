@@ -36,8 +36,8 @@ extra:
       link: https://forums.developer.nvidia.com/u/pwoolvett
       
 repo_url: https://github.com/pwoolvett/pwoolvett.github.io
-# markdown_extensions:
-#   - admonition
+markdown_extensions:
+  - admonition
 #   # - codehilite:
 #   #     guess_lang: false
 #   - pymdownx.highlight
