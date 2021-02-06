@@ -8,6 +8,9 @@ theme:
     accent: deep purple
   logo: 'img/logo.png'
   favicon: 'img/logo.png'
+  features:
+  - search.suggest
+  - search.highlight
 
   nav:
   - Home: index.md
@@ -37,11 +40,23 @@ extra:
       
 repo_url: https://github.com/pwoolvett/pwoolvett.github.io
 markdown_extensions:
+  - meta
   - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: "."
+  - pymdownx.progressbar
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+
 #   # - codehilite:
 #   #     guess_lang: false
-#   - pymdownx.highlight
-#   - pymdownx.superfences
 #   - toc:
 #       permalink: true
 #   - footnotes
@@ -65,10 +80,12 @@ markdown_extensions:
 extra_javascript:
   - js/termynal.js
   - js/customTermynals.js
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   # - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
-  # - javascripts/config.js
 extra_css:
   - css/termynal.css
-  - css/align.css
+  # - css/align.css
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css

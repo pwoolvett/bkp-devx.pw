@@ -1,19 +1,33 @@
-# Welcome to MkDocs
+# Hello there!
 
-tsdf
+Here you can find some notes, snippets, reflections, summaries, and general thoughts on
+what I find interesting to save on my daily basis. Topics  are usually related to one of:
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+* Artificial Intelligence, Data Science, Machine Learning, Natural Language Processing,
+  Computer Vision, and firends.
+* Python in general.
+* CI, Devops.
+* Iot Devices.
+* Embedded computing.
+* Mechanical Keyboards.
 
-## Commands
+## gists
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+These are quickreads (`<10[min]`) which show something very specific. Most of these
+provide small tweaks aimed at boosting unix/docker/python-related productivity.
 
-## Project layout
+## tutorials
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+I expect to save time redirecting people here (:
+
+## projects
+
+These are somewhat more involved, and might require some previous background to
+understand / make sense of.
+
+- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- [ ] Vestibulum convallis sit amet nisi a tincidunt
+    * [x] In hac habitasse platea dictumst
+    * [x] In scelerisque nibh non dolor mollis congue sed et metus
+    * [ ] Praesent sed risus massa
+- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
