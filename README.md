@@ -11,8 +11,9 @@ All are optional, only rquired if you want to run `mkdocs` locally.
 
 ## Development (writing the webpages)
 
-0. [Optional, Recommended] Open vscode
+0. [Optional, Recommended] Open vscode using the suppllied devcontainer
 1. create a `.md` inside the `docs/docs` folder.
 2. Add a reference to it at `docs/mkdocs.yml` -> `theme.nav`
-3. Commit + Push
-4. Github actions take care of the deployment
+3. [Optional, Recommended] Run `cd docs && mkdocs serve` for a live preview.
+4. Commit + Push
+5. Github actions take care of the deployment

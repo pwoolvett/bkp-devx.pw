@@ -27,12 +27,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Red Pill
-        if: {{ github.ref != 'ref/head/master' }}
+        if: ${{ github.ref != 'ref/head/master' }}
         run: |
           echo "canvas.devx.pw" > docs/CNAME
 
       - name: Blue Pill
-        if: {{ github.ref == 'ref/head/master' }}
+        if: ${{ github.ref == 'ref/head/master' }}
         run: |
           echo "devx.pw" > docs/CNAME
 
