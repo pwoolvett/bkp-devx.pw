@@ -62,13 +62,13 @@ repo_url: https://github.com/pwoolvett/pwoolvett.github.io
 #       custom_checkbox: true
 #   - pymdownx.tilde
 #   - meta
-# extra_javascript:
-#   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-#   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
-#   # - javascripts/config.js
-#   - js/termynal.js
-#   - js/customTermynals.js
-# extra_css:
-#   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
-#   - css/termynal.css
-#   - css/align.css
+extra_javascript:
+  - js/termynal.js
+  - js/customTermynals.js
+  # - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  # - javascripts/config.js
+extra_css:
+  - css/termynal.css
+  - css/align.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
