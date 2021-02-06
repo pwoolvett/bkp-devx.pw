@@ -1,1 +1,74 @@
-site_name: My Docs
+site_name: Independent and Identically distributed Brainfarts
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep purple
+  logo: 'img/logo.png'
+  favicon: 'img/logo.png'
+
+  nav:
+  - Home: index.md
+  - Gists:
+      - gists/2020-10-07-tty-browser.md
+      - gists/blackini.md
+      - gists/empty-folders.md
+      - gists/github-pages-website.md
+      - gists/gstlaunch-bins.md
+  - Tutorials:
+      - tutorials/python-setup.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/pablowoolvett/
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/pwoolvett
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/pwoolvett
+    - icon: fontawesome/brands/stack-exchange
+      link: https://stackexchange.com/users/6923219/pwoolvett
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/pwoolvett
+    - icon: material/forum
+      link: https://forums.developer.nvidia.com/u/pwoolvett
+      
+repo_url: https://github.com/pwoolvett/pwoolvett.github.io
+# markdown_extensions:
+#   - admonition
+#   # - codehilite:
+#   #     guess_lang: false
+#   - pymdownx.highlight
+#   - pymdownx.superfences
+#   - toc:
+#       permalink: true
+#   - footnotes
+#   - pymdownx.arithmatex
+#   - pymdownx.betterem:
+#       smart_enable: all
+#   - pymdownx.caret
+#   - pymdownx.critic
+#   - pymdownx.details
+#   - pymdownx.emoji:
+#       emoji_generator: !!python/name:pymdownx.emoji.to_svg
+#   - pymdownx.inlinehilite
+#   - pymdownx.magiclink
+#   - pymdownx.mark
+#   - pymdownx.smartsymbols
+#   - pymdownx.superfences
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.tilde
+#   - meta
+# extra_javascript:
+#   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+#   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+#   # - javascripts/config.js
+#   - js/termynal.js
+#   - js/customTermynals.js
+# extra_css:
+#   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
+#   - css/termynal.css
+#   - css/align.css
