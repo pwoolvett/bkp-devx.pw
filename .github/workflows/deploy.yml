@@ -29,11 +29,15 @@ jobs:
 
       - name: Build mkdocs
         run: |
-          cd docs && mkdocs build
+          mkdocs build \
+            --clean \
+            -f docs/mkdocs.yml \
+            -d build
 
       - name: Deploy Prod
         run: |
-          cd docs \
-            && mkdocs gh-deploy \
-              --clean \
-              --force
+          mkdocs gh-deploy \
+            --clean \
+            -f docs/mkdocs.yml \
+            -d build \
+            --strict
