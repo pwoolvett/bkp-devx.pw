@@ -17,10 +17,18 @@ jobs:
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
-          # Semantic version range syntax or exact version of a Python version
           python-version: '3.9'
-          # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
+
+      - name: Red Pill
+        if: ${{ github.ref != 'ref/head/master' }}
+        run: |
+          echo "canvas.devx.pw" > docs/src/CNAME
+
+      - name: Blue Pill
+        if: ${{ github.ref == 'ref/head/master' }}
+        run: |
+          echo "devx.pw" > docs/src/CNAME
 
       - name: Install mkdocs
         run: |
