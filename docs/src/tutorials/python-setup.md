@@ -8,6 +8,10 @@ tags:
   - hello world
   - python
 ---
+
+!!! attention
+    This post is replaced by the next one in the series. Its left for reference only.
+
 ![python yaay](../img/snake_ladder.jpg#center)
 
 This is the first of several posts about common python stuff, starting from installation, through configuration of a project, and explaining an opinionated (and maybe over-complicated) python setup.
