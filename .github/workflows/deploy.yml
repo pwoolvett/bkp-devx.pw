@@ -21,12 +21,12 @@ jobs:
           architecture: 'x64'
 
       - name: Red Pill
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         run: |
           echo "deploy_env=devx.pw" >> $GITHUB_ENV
 
       - name: Blue Pill
-        if: github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/master'
         run: |
           echo "deploy_env=staging.devx.pw" >> $GITHUB_ENV
 
