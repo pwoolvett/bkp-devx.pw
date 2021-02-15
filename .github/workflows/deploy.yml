@@ -20,12 +20,12 @@ jobs:
           python-version: '3.9'
           architecture: 'x64'
 
-      - name: Red Pill
+      - name: Choose production
         if: github.ref == 'refs/heads/master'
         run: |
           echo "deploy_env=devx.pw" >> $GITHUB_ENV
 
-      - name: Blue Pill
+      - name: Choose staging
         if: github.ref != 'refs/heads/master'
         run: |
           echo "deploy_env=staging.devx.pw" >> $GITHUB_ENV
