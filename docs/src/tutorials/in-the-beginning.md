@@ -6,6 +6,10 @@ Read these before everything else, and keep them in mid when developing / contri
 
 * [PEP 8](https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds)
 
+* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+* [semver](https://semver.org/)
+
 Don't worry too much about the specifics, but grasp the general idea behind them.
 
 
