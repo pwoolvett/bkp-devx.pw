@@ -23,6 +23,7 @@ theme:
   nav:
   - Home: index.md
   - Gists:
+      - gists/2022-07-19-discord-status-sync
       - gists/2020-10-07-tty-browser.md
       - gists/blackini.md
       - gists/empty-folders.md
