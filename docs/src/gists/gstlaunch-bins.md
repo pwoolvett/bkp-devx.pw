@@ -1,5 +1,5 @@
 ---
-title: Using ``bin`` elements in Gstreamer from ``gstlaunch``
+title: Using bin elements in Gstreamer from gstlaunch
 tags: gstreamer
 ---
 

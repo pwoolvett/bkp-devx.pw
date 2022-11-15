@@ -27,9 +27,14 @@ theme:
       - gists/2022-02-27-explanatory-aliases.md
       - gists/2020-10-07-tty-browser.md
       - gists/blackini.md
+      - gists/drytoml.md
+      - gists/dash-or_underscores.md
+      - gists/batch-delete-workflow-runs.md
       - gists/empty-folders.md
+      - gists/avoiding-sleep.md
       - gists/github-pages-website.md
       - gists/gstlaunch-bins.md
+      - gists/integrating-behave-into-pytest.md
       - gists/coverage-py-editable.md
       - gists/filenotfound.md
   - Tutorials:
@@ -109,5 +114,6 @@ extra_javascript:
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
 extra_css:
   - css/termynal.css
+  - css/osx-dock.css
   # - css/align.css
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css

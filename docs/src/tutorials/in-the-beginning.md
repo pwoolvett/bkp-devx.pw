@@ -1,6 +1,6 @@
 # Must read articles
 
-Read these before everything else, and keep them in mid when developing / contributing:
+Read these before everything else, and keep them in mind when developing / contributing:
 
 * [Bikeshed, or "the sleep(1) saga"](http://bikeshed.com/)
 

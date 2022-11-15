@@ -21,7 +21,6 @@ jobs:
           architecture: 'x64'
 
       - name: Red Pill - devx.pw
-
         if: github.ref == 'refs/heads/master'
         run: |
           echo "deploy_env=devx.pw" >> $GITHUB_ENV
