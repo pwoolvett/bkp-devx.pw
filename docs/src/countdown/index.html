@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="box">
+    <div class="clock">
+      <div id="day" class="digits"></div>
+      <small class="dots">DAYS</small>
+      <div id="hour" class="digits"></div>
+      <small class="dots">HOURS</small>
+      <div id="minute" class="digits"></div>
+      <small class="dots">MINUTES</small>
+      <div id="second" class="digits"></div>
+      <small class="dots">SECONDS</small>
+    </div>
+    <input type="range" min="0" max="100" value="50" class="slider" id="volumeControl">
+    <div id="abstract"></div>
+  </div>
+
+  <div data-video="g6hY7dB54bc" data-autoplay="1" data-loop="1" id="youtube-audio" class="yt-audioplay">
+  </div>
+
+  <script src="js/yt-iframe.js"></script>
+  <script src="js/yt-audio.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
