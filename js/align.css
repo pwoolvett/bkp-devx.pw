@@ -1,0 +1,15 @@
+img[src*='#left'] {
+    float: left;
+}
+img[src*='#right'] {
+    float: right;
+}
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}

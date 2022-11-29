@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/termynal.css">
+  <style type="text/css">
+    body {
+      margin:0;
+      padding:0;
+    }
+    canvas{
+      position:fixed;
+      left:0;
+      top:0;
+      z-index:-1;
+    }
+    .Center { 
+            width:50%; 
+            height:50%;
+            position: fixed; 
+            /* background-color: blue;  */
+            top: 50%; 
+            left: 50%; 
+            margin-top: -25%; 
+            margin-left: -25%; 
+        } 
+    </style>
+</head>
+
+
+<body>
+  <div class="bg-overlay"><canvas id="c" width="1217" height="1006"></canvas></div>
+  <div class="Center">
+    <div id="termynal" class="centerDiv" data-termynal>
+      <span data-ty="input">4 8 15 16 23 42</span>
+      <span data-ty="input">404? Ooops...</span>
+      <span data-ty="input">I probably messed up something.</span>
+      <span data-ty="input">Let me see...</span>
+      <span data-ty="progress"></span>
+      <span data-ty>Nope</span>
+      <span data-ty>Don't worrky, I'll fix it</span>
+      <span data-ty>Eventually</span>
+  </div>
+  </div> 
+  <script src="js/termynal.js" data-termynal-container="#termynal">
+  var termynal = new Termynal('#termynal', { startDelay: 600 })
+  </script>
+  <script>
+
+  var w = c.width = window.innerWidth,
+    h = c.height = window.innerHeight,
+    ctx = c.getContext( '2d' ),
+    
+    opts = {
+      
+      count: 50,
+      variation: .3,
+      baseLife: 50,
+      addedLife: 20,
+      
+      cx: w / 2,
+      cy: h / 2,
+      
+      repaintAlpha: .1
+    },
+    
+    snakes = [],
+    first = true;
+
+function init() {
+  
+  snakes.length = 0;
+  
+  ctx.fillStyle = 'black';
+  ctx.fillRect( 0, 0, w, h );
+  
+  if( first ) {
+    
+    anim();
+    first = false;
+  }
+}
+
+function anim() {
+  
+  window.requestAnimationFrame( anim );
+  
+  update();
+  render();
+}
+
+function update() {
+  
+ if( snakes.length < opts.count && Math.random() < .1 )
+   snakes.push( new Snake );
+  
+  snakes.map( function( snake ) { snake.update(); } );
+}
+function render() {
+  
+  ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', opts.repaintAlpha );
+  ctx.fillRect( 0, 0, w, h );
+  
+  snakes.map( function( snake ) { snake.render(); } );
+}
+
+function Snake() {
+  
+  this.reset();
+}
+Snake.prototype.reset = function() {
+  
+  this.x1 = opts.cx + Math.random();
+  this.x2 = opts.cx + Math.random();
+  this.x3 = opts.cx + Math.random();
+  this.y1 = opts.cy + Math.random();
+  this.y2 = opts.cy + Math.random();
+  this.y3 = opts.cy + Math.random();
+  
+  this.rad = Math.random() * Math.PI * 2;
+  
+  this.direction = Math.random() < .5 ? 1 : -1;
+  this.size = 1;
+  this.life = opts.baseLife + Math.random() * opts.addedLife;
+}
+
+Snake.prototype.update = function() {
+  
+  --this.life;
+  
+  this.size += 1 * ( Math.random() / 2 + .5 );
+  this.direction *= -1; // if you don't understand why, try commenting it out. this makes the triangles go in opposite directions to create lines
+  this.rad += Math.random() * opts.variation * ( Math.random() < .5 ? 1 : -1 ) + Math.PI / 2 * this.direction;
+    
+  var x4 = this.x3 + Math.cos( this.rad ) * this.size,
+      y4 = this.y3 + Math.sin( this.rad ) * this.size;
+  
+  this.x1 = this.x2; this.y1 = this.y2;
+  this.x2 = this.x3; this.y2 = this.y3;
+  this.x3 = x4; this.y3 = y4;
+  
+  if( this.life <= 0 || this.x1 > w || this.x1 < 0 || this.y1 > h || this.y1 < 0 ) this.reset();
+}
+Snake.prototype.render = function() {
+  
+  ctx.fillStyle = 'hsla(0, 0%, light%, .5)'.replace( 'light', 25 + Math.random() * 50 );
+  ctx.beginPath();
+  ctx.moveTo( this.x1, this.y1 );
+  ctx.lineTo( this.x2, this.y2 );
+  ctx.lineTo( this.x3, this.y3 );
+  ctx.fill();
+}
+
+init();
+</script>
+</body>
+
+</html>
